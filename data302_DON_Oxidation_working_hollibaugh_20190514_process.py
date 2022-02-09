@@ -39,7 +39,7 @@ if process == 'data':
             longitude=longitude*-1
         longitude="%6.4f"%longitude
         longitudes.append(longitude)
-        print(longitude)
+        #print(longitude)
     df_data['lon']=longitudes
     
     lati=list(df_data['Latitude (degrees and deciminutes N)'].values)
@@ -51,7 +51,7 @@ if process == 'data':
         latd = float(lats[0].replace("°",""))
         latmin = float(lats[1].replace("'",""))
         latsec = float(lats[2].replace("\"",""))
-        lath = lons[3]
+        lath = lats[3]
         #print(latd,latmin,latsec,lath)
         latitude = latd+(latmin+(latsec/60))/60
         if lath == 'S':
